@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import MainMenu from './components/MainMenu';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App min-h-screen bg-gray-800 flex flex-col">
+        <Header />
+        <main className="flex-grow flex items-center justify-center">
+          <Routes>
+            <Route path="/" element={<MainMenu />} />
+            {/* Add other routes here */}
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
