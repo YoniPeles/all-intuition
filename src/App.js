@@ -8,13 +8,13 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App min-h-screen bg-gray-800 flex flex-col">
+      <div className="App min-h-screen bg-gray-900 text-white flex flex-col">
         <Header />
         <main className="flex-grow flex flex-col">
           <Routes>
             <Route path="/" element={<MainMenu />} />
             <Route path="/hand-recognition" element={
-              <div className="flex-grow flex justify-center items-center p-4">
+              <div className="flex-grow flex justify-center items-center w-full h-full">
                 <HandRecognition />
               </div>
             } />
