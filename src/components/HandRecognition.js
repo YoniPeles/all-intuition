@@ -98,6 +98,7 @@ function HandRecognition() {
       if (event.key === ' ' || event.key === 'Enter') {
         event.preventDefault();
         console.log('Starting game');
+        setGameOver(false);
         startGame();
       }
       return;
